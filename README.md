@@ -68,7 +68,7 @@ Make sure you have the following installed:
 1. **Clone the project**
    ```bash
    git clone <repository-url>
-   cd tests-book-api
+   cd assignment
    ```
 
 2. **Install dependencies**
@@ -79,7 +79,8 @@ Make sure you have the following installed:
    ```bash
    mvn test allure:serve
    ```
-
+4. **Report Will Open In Browser Once Execution Completes**
+   ![img.png](img.png)
 ---
 
 ## 📁 Output Locations
