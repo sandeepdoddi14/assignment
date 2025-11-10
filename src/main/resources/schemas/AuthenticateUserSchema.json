@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["message", "token", "expiresIn", "user"],
+  "properties": {
+    "message": { "type": "string" },
+    "token": { "type": "string" },
+    "expiresIn": { "type": "string" },
+    "user": {
+      "type": "object",
+      "required": ["username", "role"],
+      "properties": {
+        "username": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

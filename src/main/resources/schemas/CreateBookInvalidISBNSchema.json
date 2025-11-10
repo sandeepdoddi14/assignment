@@ -1,0 +1,5 @@
+{
+  "error": "Bad Request",
+  "message": "Invalid ISBN format. ISBN should be 10 or 13 digits (hyphens and spaces allowed)",
+  "example": "978-0135957059"
+}

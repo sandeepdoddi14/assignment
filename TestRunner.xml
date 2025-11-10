@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BooksLibrary API Test Suite" thread-count="3">
+    <test name="Authenticate User Tests">
+        <classes>
+            <class name="auth.AuthTests"/>
+        </classes>
+    </test>
+    <test name="Book Library CRUD Tests">
+        <classes>
+            <class name="book.BookCrudTests"/>
+        </classes>
+    </test>
+    <test name="Schema Validations">
+        <classes>
+            <class name="validation.SchemaValidationTests"/>
+        </classes>
+    </test>
+</suite>
