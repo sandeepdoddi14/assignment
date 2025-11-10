@@ -71,13 +71,13 @@ Make sure you have the following installed:
    cd assignment
    ```
 
-2. **Install dependencies**
+2. **Install dependencies and execute tests**
    ```bash
    mvn clean install
    ```
-3. **Execute Tests and Generate allure report**
+3. **Generate allure report**
    ```bash
-   mvn test allure:serve
+   mvn allure:serve
    ```
 4. **Report Will Open In Browser Once Execution Completes**
    ![img.png](img.png)
