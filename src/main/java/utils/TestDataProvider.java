@@ -49,7 +49,7 @@ public class TestDataProvider {
         }
     }
 
-    public CreateBook getCreateBookPayload() {
+    public CreateBook loadCreateBookPayload() {
         ObjectMapper mapper = new ObjectMapper();
         String path = "testData/" + env + "/book/CreateBook.json";
 
@@ -64,7 +64,7 @@ public class TestDataProvider {
         }
     }
 
-    public CreateBook getUpdateBookPayload() {
+    public CreateBook loadUpdateBookPayload() {
         ObjectMapper mapper = new ObjectMapper();
         String path = "testData/" + env + "/book/UpdateBook.json";
 
@@ -79,7 +79,7 @@ public class TestDataProvider {
         }
     }
 
-    public CreateBook getCreateBookInvalidISBNPayload() {
+    public CreateBook loadCreateBookInvalidISBNPayload() {
         ObjectMapper mapper = new ObjectMapper();
         String path = "testData/" + env + "/book/InvalidISBN.json";
 

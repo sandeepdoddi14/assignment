@@ -34,7 +34,7 @@ public class SchemaValidationTests extends TestBase {
 
     @Test(retryAnalyzer = RetryListener.class, dependsOnMethods = "testAuthenticateUserResponseSchema", groups = {"regression,smoke"})
     public void testCreateBookResponseSchema() throws Exception {
-        CreateBook createBookPayload = testDataProvider.getCreateBookPayload();
+        CreateBook createBookPayload = testDataProvider.loadCreateBookPayload();
 
         Response response = booksLibraryApiClient.createBook(authorization, createBookPayload);
         boolean isSchemaValid = jsonSchemaValidator.validate(response, "CreateBookResponseSchema.json");
@@ -43,7 +43,7 @@ public class SchemaValidationTests extends TestBase {
 
     @Test(retryAnalyzer = RetryListener.class, dependsOnMethods = "testAuthenticateUserResponseSchema", groups = {"regression"})
     public void testCreateBookWithInvalidISBNResponseSchema() throws Exception {
-        CreateBook createBookPayload = testDataProvider.getCreateBookInvalidISBNPayload();
+        CreateBook createBookPayload = testDataProvider.loadCreateBookInvalidISBNPayload();
 
         Response response = booksLibraryApiClient.createBook(authorization, createBookPayload);
         boolean isSchemaValid = jsonSchemaValidator.validate(response, "CreateBookInvalidISBNSchema.json");

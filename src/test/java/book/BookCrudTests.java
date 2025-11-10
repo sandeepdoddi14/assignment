@@ -30,7 +30,7 @@ public class BookCrudTests extends TestBase {
 
     @Test(retryAnalyzer = RetryListener.class, groups = {"smoke,regression"}, priority = 1)
     public void testCreateBook()  {
-        createBookPayload = testDataProvider.getCreateBookPayload();
+        createBookPayload = testDataProvider.loadCreateBookPayload();
 
         createBookResponse = booksLibraryApiClient.createBook(authorization, createBookPayload);
         Assert.assertEquals(createBookResponse.getStatusCode(), 201, "FAILED || Expected Status Code to be 201");
@@ -54,7 +54,7 @@ public class BookCrudTests extends TestBase {
 
     @Test(retryAnalyzer = RetryListener.class, groups = {"smoke,regression"}, priority = 3, dependsOnMethods = "testCreateBook")
     public void testUpdateBook() {
-        updateBookPayload = testDataProvider.getUpdateBookPayload();
+        updateBookPayload = testDataProvider.loadUpdateBookPayload();
 
         Response updateBookResponse = booksLibraryApiClient.updateBook(authorization, createBookResponse.jsonPath().get("data.id"), updateBookPayload);
         Assert.assertEquals(updateBookResponse.getStatusCode(), 200, "FAILED || Expected Status Code to be 200");
